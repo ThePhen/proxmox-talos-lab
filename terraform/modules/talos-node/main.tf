@@ -38,7 +38,7 @@ resource "proxmox_vm_qemu" "talos_node" {
   memory  = var.memory
   scsihw  = "virtio-scsi-pci"
   agent   = 0
-  onboot  = true
+  start_at_node_boot  = true
 
   # CPU Configuration
   cpu {

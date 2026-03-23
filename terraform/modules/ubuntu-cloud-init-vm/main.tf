@@ -18,7 +18,7 @@ resource "proxmox_vm_qemu" "management_vm" {
   memory   = var.memory
   scsihw   = "virtio-scsi-pci"
   agent    = 1
-  onboot   = true
+  start_at_node_boot   = true
   boot     = "c"
   bootdisk = "scsi0"
 
