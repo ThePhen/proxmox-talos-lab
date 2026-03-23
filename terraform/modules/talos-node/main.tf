@@ -1,4 +1,13 @@
 # terraform/modules/talos-node/main.tf
+terraform {
+  required_providers {
+    proxmox = {
+      source  = "telmate/proxmox"
+      version = "3.0.2-rc07"
+    }
+  }
+}
+
 resource "proxmox_vm_qemu" "talos_node" {
   name        = var.node_prefix
   target_node = var.target_node
